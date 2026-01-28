@@ -8,6 +8,7 @@ const Courses = () => {
   return (
     <>
       <h1 id='courses'>Courses</h1>
+      <h3 style={{marginBottom:"10px"}}>Click on a course to view details</h3>
       <div className='card'>
         {student.Courses.map(course=>(
           <Link to={`/dashboard/courses/${course.id}`} className='course-row-link' key={course.id}>

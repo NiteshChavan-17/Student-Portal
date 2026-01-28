@@ -28,6 +28,8 @@ const Dashboard = () => {
         <NavLink to={'/dashboard'} end className={({isActive})=>isActive?"active-link":"" }>Dashboard Overview</NavLink>
         <NavLink to={'/dashboard/profile'} className={({isActive})=>isActive?"active-link":""}>Profile</NavLink>
         <NavLink to={'/dashboard/courses'} className={({isActive})=>isActive?"active-link":""}>Courses</NavLink>
+        
+
         <button id="logout" onClick={handleClick} style={{color:'white', height:"30px", 
           width:"90px", border:"none",borderRadius:"10px", fontSize:"15px", fontWeight:"bolder", marginTop:"auto"}}>Logout
         </button>
