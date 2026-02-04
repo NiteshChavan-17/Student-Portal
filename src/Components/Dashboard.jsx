@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
@@ -12,10 +12,13 @@ const Dashboard = () => {
   let {setIslogin} = useContext(AuthContext);
   let navigate = useNavigate();
 
+  let [islogout, setIslogout] = useState(false);
+
   async function handleClick() {
+    setIslogout(true);
     await new Promise((resolve)=> setTimeout(resolve,3000));
-    setIslogin(false);
     localStorage.removeItem("islogin");
+    setIslogin(false);
     navigate("/login");
     
   }
@@ -32,7 +35,8 @@ const Dashboard = () => {
           
 
         <button id="logout" onClick={handleClick} style={{color:'white', height:"30px", 
-          width:"90px", border:"none",borderRadius:"10px", fontSize:"15px", fontWeight:"bolder", marginTop:"auto"}}>Logout
+          width:"100px", border:"none",borderRadius:"10px", fontSize:"15px", fontWeight:"bolder", marginTop:"auto"}} 
+          disabled = {islogout}>{!islogout?"Logout":"Logging out"}
         </button>
       </div>
 
