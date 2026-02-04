@@ -35,7 +35,7 @@ const Dashboard = () => {
           
 
         <button id="logout" onClick={handleClick} style={{color:'white', height:"30px", 
-          width:"100px", border:"none",borderRadius:"10px", fontSize:"15px", fontWeight:"bolder", marginTop:"auto"}} 
+          width:"100px", border:"none",borderRadius:"10px", fontSize:"15px", fontWeight:"bolder", marginTop:"auto", cursor:'pointer'}} 
           disabled = {islogout}>{!islogout?"Logout":"Logging out"}
         </button>
       </div>

@@ -44,7 +44,7 @@ const Login = () => {
       </div>
           <br/>
       <input type='submit' style={{backgroundColor:isSubmitting?'green':'blueviolet',color:'white', height:"30px", 
-      width:"90px", border:"none",borderRadius:"10px", fontSize:"15px", fontWeight:"bolder"}}
+      width:"90px", border:"none",borderRadius:"10px", fontSize:"15px", fontWeight:"bolder", cursor:'pointer'}}
       disabled={isSubmitting} value={isSubmitting?"Logging in":"Submit"}/>
     </form>
     </div>  
